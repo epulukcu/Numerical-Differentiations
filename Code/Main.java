@@ -9,12 +9,10 @@ import java.util.*;
  * I kept all the data I could access on an array list. Also, I set the canvas of 700*700 with x range [-10, 10] to show how the functions look like.
  */
 
-public class Elif_Pulukcu {
+public class Test {
 
-	public Elif_Pulukcu() { //default constructor
-		
+	public Test() { //default constructor
 	}
-
 	/**
 	 * @param args
 	 */
@@ -23,7 +21,6 @@ public class Elif_Pulukcu {
 
 		String file = "functions1.txt";
 		try {
-
 			File dataFile = new File(file);
 			Scanner input = null;
 			String line;
@@ -39,10 +36,8 @@ public class Elif_Pulukcu {
 			StdDraw.line(-10, 0, 10, 0);
 
 			for (int i = 0; i < 20; i++) {
-
 				StdDraw.line(0 - 0.1, i - 10, 0 + 0.1, i - 10);
 				StdDraw.line(i - 10, 0 - 0.1, i - 10, 0 + 0.1);
-
 			}
 
 			input = new Scanner(dataFile);
@@ -75,7 +70,6 @@ public class Elif_Pulukcu {
 							values.get(3));
 					polinoms.add(thirdDimension);
 				}
-				
 			}
 
 			for (Polynomial p : polinoms) {
@@ -85,14 +79,10 @@ public class Elif_Pulukcu {
 					double y = p.evaluate(i);
 					p.setX(i);
 					p.setY(y);
-					
 				}
-
 				p.draw();
-				
 				System.out.println(p.toString());
 				p.derivative(-10, 10);
-				
 			}
 		}
 
